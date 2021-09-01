@@ -46,16 +46,3 @@
       path: vim/vimrc
     ~/.vim/autoload/plug.vim:
       path: vim/vim-plug/plug.vim
-- shell:
-    -
-      command: '
-        for bin in flake8 git tmux vim zsh; do
-          if ! command -v "$bin" &> /dev/null;
-            then echo -e "\033[1;33m! $bin is not installed\033[0m";
-          fi;
-        done'
-      description: Checking installed binaries
-      stdout: true
-    -
-      command: vim +'PlugInstall --sync' +qa
-      description: Install vim plugins
