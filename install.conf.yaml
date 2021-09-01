@@ -7,23 +7,8 @@
     -
       command: git submodule update --init --recursive
       description: Installing submodules
-    - 
-      command: sudo apt install zsh
-      description: Installing z-shell
-    -
-      command: sudo apt install curl
-      description: Installing curl
-    -
-      command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-      description: Installing oh-my-zsh for z-shell configuration      
 - create:
     - ~/bin
-    - ~/.vim
-    - ~/.vim/autoload
-    - ~/.vim/plugged
-    - ~/.vim/backup
-    - ~/.vim/swp
-    - ~/.vim/undo
 - clean:
     ~/:
       force: true
@@ -42,7 +27,3 @@
       path: tmux/tmux.conf
     ~/.tmux:
       path: tmux/tmux
-    ~/.vimrc:
-      path: vim/vimrc
-    ~/.vim/autoload/plug.vim:
-      path: vim/vim-plug/plug.vim
